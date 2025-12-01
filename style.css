@@ -1586,10 +1586,15 @@ footer {
         display: flex;
     }
     
-    /* Adjust widgets position for mobile nav */
+    /* Adjust widgets position for mobile nav - higher so it doesn't cover nav */
     .chat-widget,
     .download-widget {
-        bottom: 90px;
+        bottom: 100px;
+    }
+
+    /* Move download widget higher on mobile */
+    .download-widget {
+        bottom: 170px;
     }
     
     /* Add padding to footer for mobile nav */
@@ -2425,10 +2430,15 @@ footer {
 }
 
 /* Mobile Chat Widget */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .chat-widget {
-        bottom: 20px;
-        right: 20px;
+        bottom: 100px;
+        right: 15px;
+    }
+
+    .download-widget {
+        bottom: 170px;
+        left: 15px;
     }
     
     .chat-box {
@@ -2437,11 +2447,25 @@ footer {
     }
     
     .chat-bubble {
-        width: 55px;
-        height: 55px;
+        width: 50px;
+        height: 50px;
     }
     
     .chat-icon {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .download-box {
+        width: calc(100vw - 40px);
+        left: -10px;
+    }
+
+    .download-bubble {
+        width: 50px;
+        height: 50px;
+    }
+
+    .download-icon {
+        font-size: 1.3rem;
     }
 }
