@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://huawei-remot.my.id/sitemap.xml
