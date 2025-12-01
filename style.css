@@ -1704,7 +1704,12 @@ footer {
     }
 }
 
-.footer-contact h4 {
+/* ========================================
+   MOBILE RESPONSIVE - FIXED
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 992px) {
     .hero .container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1723,7 +1728,8 @@ footer {
     }
 
     .hero-image {
-        margin-top: 60px;
+        margin-top: 40px;
+        order: 2;
     }
 
     .services-grid {
@@ -1734,14 +1740,62 @@ footer {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+}
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
+/* Mobile */
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 60px;
+        min-height: auto;
     }
 
-    .footer-brand p {
-        max-width: 100%;
+    .hero .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .phone-mockup {
+        width: 200px;
+        height: 400px;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1815,24 +1869,88 @@ footer {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 140px 0 60px;
+        padding: 120px 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 8px 14px;
+        margin-bottom: 20px;
     }
 
     .btn {
-        padding: 14px 24px;
-        font-size: 0.9rem;
+        padding: 12px 20px;
+        font-size: 0.85rem;
     }
 
     .hero-stats {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
     }
 
     .phone-mockup {
-        width: 220px;
-        height: 440px;
+        width: 180px;
+        height: 360px;
+        border-radius: 30px;
     }
-    
+
+    .phone-screen {
+        border-radius: 22px;
+    }
+
+    .success-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .screen-text {
+        font-size: 0.9rem;
+    }
+
+    .screen-subtext {
+        font-size: 0.75rem;
+    }
+
+    /* Section titles */
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+    }
+
+    /* Service cards */
+    .service-card {
+        padding: 20px;
+    }
+
+    /* Device cards */
+    .device-card {
+        padding: 15px;
+    }
+
     /* Hide custom cursor on mobile */
     .cursor-core,
     .cursor-ring,
