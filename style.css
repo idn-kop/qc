@@ -1564,42 +1564,28 @@ footer {
     letter-spacing: 0.5px;
 }
 
-.mobile-nav-item.wa-btn {
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.mobile-nav-item.wa-btn:hover {
-    color: white;
-    transform: scale(1.05);
-}
-
-.mobile-nav-item.wa-btn::before {
-    display: none;
-}
-
 /* Show on mobile */
 @media (max-width: 768px) {
     .mobile-nav {
         display: flex;
+        height: 56px;
+        padding: 8px 0;
     }
     
-    /* Adjust widgets position for mobile nav - higher so it doesn't cover nav */
-    .chat-widget,
-    .download-widget {
-        bottom: 100px;
+    /* Adjust widgets position for mobile nav */
+    .chat-widget {
+        bottom: 70px;
+        right: 15px;
     }
 
-    /* Move download widget higher on mobile */
     .download-widget {
-        bottom: 170px;
+        bottom: 70px;
+        left: 15px;
     }
     
     /* Add padding to footer for mobile nav */
     footer {
-        padding-bottom: 80px;
+        padding-bottom: 70px;
     }
 }
 
@@ -1874,7 +1860,14 @@ footer {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 120px 0 40px;
+        padding: 140px 0 40px;
+    }
+
+    .badge {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+        margin-bottom: 15px;
+        margin-top: 10px;
     }
 
     .hero h1 {
@@ -1885,12 +1878,6 @@ footer {
     .hero-subtitle {
         font-size: 0.9rem;
         margin-bottom: 25px;
-    }
-
-    .badge {
-        font-size: 0.75rem;
-        padding: 8px 14px;
-        margin-bottom: 20px;
     }
 
     .btn {
