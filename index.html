@@ -286,158 +286,370 @@
             <div class="section-header">
                 <span class="section-badge">Compatibility</span>
                 <h2>Supported <span class="gradient-text">Models</span></h2>
-                <p>We support a wide range of devices with Qualcomm processors</p>
+                <p>We support a wide range of Huawei & Honor devices</p>
             </div>
 
-            <div class="models-filter">
-                <button class="filter-btn active" data-filter="all">All Models</button>
-                <button class="filter-btn" data-filter="huawei">Huawei</button>
-                <button class="filter-btn" data-filter="honor">Honor</button>
-                <button class="filter-btn" data-filter="matepad">MatePad</button>
-                <button class="filter-btn" data-filter="nova">Nova</button>
+            <!-- Chip Type Tabs -->
+            <div class="chip-tabs">
+                <button class="chip-tab active" data-chip="qualcomm">
+                    <i class="fas fa-microchip"></i> Qualcomm
+                </button>
+                <button class="chip-tab" data-chip="kirin">
+                    <i class="fas fa-microchip"></i> Kirin
+                </button>
             </div>
 
-            <div class="models-grid">
-                <!-- Huawei P Series -->
-                <div class="model-card" data-category="huawei">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>P50 Series</h4>
-                    <p>ABR-XXX (QC_888), ABR-xxx (P50e_QC_778)</p>
+            <!-- QUALCOMM SECTION -->
+            <div class="chip-section" id="qualcomm-section">
+                <div class="chip-header">
+                    <div class="chip-badge qualcomm">
+                        <i class="fas fa-microchip"></i> QUALCOMM DEVICES
+                    </div>
                 </div>
 
-                <div class="model-card" data-category="huawei">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>P50 Pro/Pocket</h4>
-                    <p>JAD-XXX (QC_888), BAL-XXX/AL60 (QC_888/778)</p>
+                <div class="models-filter">
+                    <button class="filter-btn active" data-filter="all-qc">All Qualcomm</button>
+                    <button class="filter-btn" data-filter="huawei-qc">Huawei</button>
+                    <button class="filter-btn" data-filter="honor-qc">Honor</button>
+                    <button class="filter-btn" data-filter="matepad-qc">MatePad</button>
+                    <button class="filter-btn" data-filter="nova-qc">Nova</button>
                 </div>
 
-                <div class="model-card" data-category="huawei">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>P60 / P60 Pro</h4>
-                    <p>LNA-AL00, MNA-AL00 (QC_8+4G)</p>
+                <div class="models-grid" id="qualcomm-grid">
+                    <!-- Huawei P Series - Qualcomm -->
+                    <div class="model-card" data-category="huawei-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>P50 Series</h4>
+                        <p>ABR-XXX (QC_888), ABR-xxx (P50e_QC_778)</p>
+                    </div>
+
+                    <div class="model-card" data-category="huawei-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>P50 Pro/Pocket</h4>
+                        <p>JAD-XXX (QC_888), BAL-XXX/AL60 (QC_888/778)</p>
+                    </div>
+
+                    <div class="model-card" data-category="huawei-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>P60 / P60 Pro</h4>
+                        <p>LNA-AL00, MNA-AL00 (QC_8+4G)</p>
+                    </div>
+
+                    <div class="model-card" data-category="huawei-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Mate 50 Series</h4>
+                        <p>CET-xxx (QC_8+4G), DCO-xxx (QC_8+4G)</p>
+                    </div>
+
+                    <div class="model-card" data-category="huawei-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Mate X3 / XS2</h4>
+                        <p>ALT-AL00/LXX, PAL-AL00/LXX (QC_888)</p>
+                    </div>
+
+                    <!-- Honor Series - Qualcomm -->
+                    <div class="model-card" data-category="honor-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor X30/X40</h4>
+                        <p>ANY/RMO (QC_695)</p>
+                    </div>
+
+                    <div class="model-card" data-category="honor-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor 50 Series</h4>
+                        <p>NTH-xxx, NTN-Lxx (QC_778/662)</p>
+                    </div>
+
+                    <div class="model-card" data-category="honor-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor 60 Series</h4>
+                        <p>LSA-xxx, TNA-AN00 (QC_778)</p>
+                    </div>
+
+                    <div class="model-card" data-category="honor-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor 70/80</h4>
+                        <p>FNE-xxx, ANN-AN00 (QC_778/782)</p>
+                    </div>
+
+                    <div class="model-card" data-category="honor-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Magic 3 Series</h4>
+                        <p>ELZ-AN00/AN10/AN20 (QC_888)</p>
+                    </div>
+
+                    <div class="model-card" data-category="honor-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor X7/X8/X9</h4>
+                        <p>CMA-LX1, VNE-xxx, ANY-LX1 (QC_680/695)</p>
+                    </div>
+
+                    <!-- MatePad Series - Qualcomm -->
+                    <div class="model-card" data-category="matepad-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
+                        <h4>MatePad SE</h4>
+                        <p>AGS5Z-XXX/AGS5-XXX (QC_680)</p>
+                    </div>
+
+                    <div class="model-card" data-category="matepad-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
+                        <h4>MatePad 10.4/11</h4>
+                        <p>BAH4-AL10, DBR-xxx, DBY-xxx (QC_778/865/870)</p>
+                    </div>
+
+                    <div class="model-card" data-category="matepad-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
+                        <h4>MatePad 11.5</h4>
+                        <p>BTK-XXX/BTKZ-XXX (QC_7_Gen_1)</p>
+                    </div>
+
+                    <div class="model-card" data-category="matepad-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
+                        <h4>MatePad Pro 10.8/11</h4>
+                        <p>MRR-xxx, GOT-W09/AL09 (QC_870/888)</p>
+                    </div>
+
+                    <div class="model-card" data-category="matepad-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
+                        <h4>Honor Pad 8</h4>
+                        <p>HEY-W09 (QC_680)</p>
+                    </div>
+
+                    <div class="model-card" data-category="matepad-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
+                        <h4>Magic Pad 13</h4>
+                        <p>GDI-W09 (QC_888)</p>
+                    </div>
+
+                    <!-- Nova Series - Qualcomm -->
+                    <div class="model-card" data-category="nova-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Nova 9 Series</h4>
+                        <p>NAM-xxx, JLN-xxx, RNA-AL00 (QC_778/680)</p>
+                    </div>
+
+                    <div class="model-card" data-category="nova-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Nova 10 Series</h4>
+                        <p>NCO-xxx, BNE-AL00 (QC_778/680)</p>
+                    </div>
+
+                    <div class="model-card" data-category="nova-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Nova 11 Series</h4>
+                        <p>FOA-xxx, GOA-xxx (QC_778)</p>
+                    </div>
+
+                    <div class="model-card" data-category="nova-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>HiNova 9/10</h4>
+                        <p>TINA/KATHY-AN00, NEL-AN00 (QC_778)</p>
+                    </div>
+
+                    <div class="model-card" data-category="nova-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Enjoy Series</h4>
+                        <p>CTR-AL00, MAO-AL00, PCU-AN00 (QC_680/480)</p>
+                    </div>
+
+                    <div class="model-card" data-category="huawei-qc">
+                        <span class="chip-label qc">QC</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>TDTech 50</h4>
+                        <p>AVA-PA00 (QC_888)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KIRIN SECTION -->
+            <div class="chip-section hidden" id="kirin-section">
+                <div class="chip-header">
+                    <div class="chip-badge kirin">
+                        <i class="fas fa-microchip"></i> KIRIN DEVICES
+                    </div>
                 </div>
 
-                <div class="model-card" data-category="huawei">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Mate 50 Series</h4>
-                    <p>CET-xxx (QC_8+4G), DCO-xxx (QC_8+4G)</p>
+                <div class="models-filter">
+                    <button class="filter-btn active" data-filter="all-kirin">All Kirin</button>
+                    <button class="filter-btn" data-filter="p-kirin">P Series</button>
+                    <button class="filter-btn" data-filter="mate-kirin">Mate Series</button>
+                    <button class="filter-btn" data-filter="honor-kirin">Honor</button>
+                    <button class="filter-btn" data-filter="nova-kirin">Nova</button>
                 </div>
 
-                <div class="model-card" data-category="huawei">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Mate X3 / XS2</h4>
-                    <p>ALT-AL00/LXX, PAL-AL00/LXX (QC_888)</p>
-                </div>
+                <div class="models-grid" id="kirin-grid">
+                    <!-- Huawei P Series - Kirin -->
+                    <div class="model-card" data-category="p-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>P40 Pro+</h4>
+                        <p>ELS-AN10/N39 (Kirin 990 5G)</p>
+                    </div>
 
-                <!-- Honor Series -->
-                <div class="model-card" data-category="honor">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Honor X30/X40</h4>
-                    <p>ANY/RMO (QC_695)</p>
-                </div>
+                    <div class="model-card" data-category="p-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>P40 / P40 Pro</h4>
+                        <p>ANA-xxx, ELS-xxx (Kirin 990 5G)</p>
+                    </div>
 
-                <div class="model-card" data-category="honor">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Honor 50 Series</h4>
-                    <p>NTH-xxx, NTN-Lxx (QC_778/662)</p>
-                </div>
+                    <div class="model-card" data-category="p-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>P30 / P30 Pro</h4>
+                        <p>ELE-xxx, VOG-xxx (Kirin 980)</p>
+                    </div>
 
-                <div class="model-card" data-category="honor">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Honor 60 Series</h4>
-                    <p>LSA-xxx, TNA-AN00 (QC_778)</p>
-                </div>
+                    <div class="model-card" data-category="p-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>P20 / P20 Pro</h4>
+                        <p>EML-xxx, CLT-xxx (Kirin 970)</p>
+                    </div>
 
-                <div class="model-card" data-category="honor">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Honor 70/80</h4>
-                    <p>FNE-xxx, ANN-AN00 (QC_778/782)</p>
-                </div>
+                    <!-- Mate Series - Kirin -->
+                    <div class="model-card" data-category="mate-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Mate 40 Pro+</h4>
+                        <p>NOP-AN00 (Kirin 9000)</p>
+                    </div>
 
-                <div class="model-card" data-category="honor">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Magic 3 Series</h4>
-                    <p>ELZ-AN00/AN10/AN20 (QC_888)</p>
-                </div>
+                    <div class="model-card" data-category="mate-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Mate 40 / Pro</h4>
+                        <p>OCE-xxx, NOH-xxx (Kirin 9000/9000E)</p>
+                    </div>
 
-                <div class="model-card" data-category="honor">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Honor X7/X8/X9</h4>
-                    <p>CMA-LX1, VNE-xxx, ANY-LX1 (QC_680/695)</p>
-                </div>
+                    <div class="model-card" data-category="mate-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Mate 30 / Pro</h4>
+                        <p>TAS-xxx, LIO-xxx (Kirin 990)</p>
+                    </div>
 
-                <!-- MatePad Series -->
-                <div class="model-card" data-category="matepad">
-                    <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
-                    <h4>MatePad SE</h4>
-                    <p>AGS5Z-XXX/AGS5-XXX (QC_680)</p>
-                </div>
+                    <div class="model-card" data-category="mate-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Mate 20 / Pro</h4>
+                        <p>HMA-xxx, LYA-xxx (Kirin 980)</p>
+                    </div>
 
-                <div class="model-card" data-category="matepad">
-                    <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
-                    <h4>MatePad 10.4/11</h4>
-                    <p>BAH4-AL10, DBR-xxx, DBY-xxx (QC_778/865/870)</p>
-                </div>
+                    <div class="model-card" data-category="mate-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Mate X / Xs</h4>
+                        <p>TAH-AN00, TAH-N29m (Kirin 990 5G)</p>
+                    </div>
 
-                <div class="model-card" data-category="matepad">
-                    <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
-                    <h4>MatePad 11.5</h4>
-                    <p>BTK-XXX/BTKZ-XXX (QC_7_Gen_1)</p>
-                </div>
+                    <div class="model-card" data-category="mate-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Mate 10 / Pro</h4>
+                        <p>ALP-xxx, BLA-xxx (Kirin 970)</p>
+                    </div>
 
-                <div class="model-card" data-category="matepad">
-                    <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
-                    <h4>MatePad Pro 10.8/11</h4>
-                    <p>MRR-xxx, GOT-W09/AL09 (QC_870/888)</p>
-                </div>
+                    <!-- Honor Series - Kirin -->
+                    <div class="model-card" data-category="honor-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor 30 Pro+</h4>
+                        <p>EBG-AN10 (Kirin 990 5G)</p>
+                    </div>
 
-                <div class="model-card" data-category="matepad">
-                    <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
-                    <h4>Honor Pad 8</h4>
-                    <p>HEY-W09 (QC_680)</p>
-                </div>
+                    <div class="model-card" data-category="honor-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor 30 / Pro</h4>
+                        <p>BMH-xxx, EBG-xxx (Kirin 985/990)</p>
+                    </div>
 
-                <div class="model-card" data-category="matepad">
-                    <div class="model-icon"><i class="fas fa-tablet-alt"></i></div>
-                    <h4>Magic Pad 13</h4>
-                    <p>GDI-W09 (QC_888)</p>
-                </div>
+                    <div class="model-card" data-category="honor-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor V30 / Pro</h4>
+                        <p>OXF-AN00/AN10 (Kirin 990 5G)</p>
+                    </div>
 
-                <!-- Nova Series -->
-                <div class="model-card" data-category="nova">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Nova 9 Series</h4>
-                    <p>NAM-xxx, JLN-xxx, RNA-AL00 (QC_778/680)</p>
-                </div>
+                    <div class="model-card" data-category="honor-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor 20 / Pro</h4>
+                        <p>YAL-xxx (Kirin 980)</p>
+                    </div>
 
-                <div class="model-card" data-category="nova">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Nova 10 Series</h4>
-                    <p>NCO-xxx, BNE-AL00 (QC_778/680)</p>
-                </div>
+                    <div class="model-card" data-category="honor-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor View 20</h4>
+                        <p>PCT-xxx (Kirin 980)</p>
+                    </div>
 
-                <div class="model-card" data-category="nova">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Nova 11 Series</h4>
-                    <p>FOA-xxx, GOA-xxx (QC_778)</p>
-                </div>
+                    <div class="model-card" data-category="honor-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Honor Magic 2</h4>
+                        <p>TNY-xxx (Kirin 980)</p>
+                    </div>
 
-                <div class="model-card" data-category="nova">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>HiNova 9/10</h4>
-                    <p>TINA/KATHY-AN00, NEL-AN00 (QC_778)</p>
-                </div>
+                    <!-- Nova Series - Kirin -->
+                    <div class="model-card" data-category="nova-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Nova 7 Pro</h4>
+                        <p>JER-AN10 (Kirin 985)</p>
+                    </div>
 
-                <div class="model-card" data-category="nova">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>Enjoy Series</h4>
-                    <p>CTR-AL00, MAO-AL00, PCU-AN00 (QC_680/480)</p>
-                </div>
+                    <div class="model-card" data-category="nova-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Nova 7 / SE</h4>
+                        <p>JEF-xxx, CND-xxx (Kirin 985/820)</p>
+                    </div>
 
-                <div class="model-card" data-category="huawei">
-                    <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>TDTech 50</h4>
-                    <p>AVA-PA00 (QC_888)</p>
+                    <div class="model-card" data-category="nova-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Nova 6 / SE</h4>
+                        <p>WLZ-xxx, JNY-xxx (Kirin 990/810)</p>
+                    </div>
+
+                    <div class="model-card" data-category="nova-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Nova 5 Pro</h4>
+                        <p>SEA-xxx (Kirin 980)</p>
+                    </div>
+
+                    <div class="model-card" data-category="nova-kirin">
+                        <span class="chip-label kirin">Kirin</span>
+                        <div class="model-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Nova 5 / 5i</h4>
+                        <p>SEA-xxx, GLK-xxx (Kirin 810/710)</p>
+                    </div>
                 </div>
             </div>
 

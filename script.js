@@ -121,43 +121,95 @@ window.addEventListener('scroll', () => {
 });
 
 // ==================== //
-// Models Filter
+// Chip Type Tabs
 // ==================== //
-const filterBtns = document.querySelectorAll('.filter-btn');
-const modelCards = document.querySelectorAll('.model-card');
+const chipTabs = document.querySelectorAll('.chip-tab');
+const qualcommSection = document.getElementById('qualcomm-section');
+const kirinSection = document.getElementById('kirin-section');
 
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterBtns.forEach(b => b.classList.remove('active'));
-        // Add active class to clicked button
-        btn.classList.add('active');
+chipTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Remove active from all tabs
+        chipTabs.forEach(t => t.classList.remove('active'));
+        // Add active to clicked tab
+        tab.classList.add('active');
 
-        const filter = btn.getAttribute('data-filter');
+        const chipType = tab.getAttribute('data-chip');
 
-        modelCards.forEach(card => {
-            if (filter === 'all') {
-                card.style.display = 'block';
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 10);
-            } else if (card.getAttribute('data-category') === filter) {
-                card.style.display = 'block';
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 10);
-            } else {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    card.style.display = 'none';
-                }, 300);
-            }
-        });
+        if (chipType === 'qualcomm') {
+            qualcommSection.classList.remove('hidden');
+            kirinSection.classList.add('hidden');
+            // Reset filter for qualcomm section
+            resetFilters('qualcomm');
+        } else {
+            qualcommSection.classList.add('hidden');
+            kirinSection.classList.remove('hidden');
+            // Reset filter for kirin section
+            resetFilters('kirin');
+        }
     });
 });
+
+function resetFilters(chipType) {
+    const section = chipType === 'qualcomm' ? qualcommSection : kirinSection;
+    const filterBtns = section.querySelectorAll('.filter-btn');
+    const modelCards = section.querySelectorAll('.model-card');
+    
+    filterBtns.forEach((btn, index) => {
+        if (index === 0) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    
+    modelCards.forEach(card => {
+        card.style.display = 'block';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+    });
+}
+
+// ==================== //
+// Models Filter (Updated for both sections)
+// ==================== //
+function setupModelFilters(section) {
+    const filterBtns = section.querySelectorAll('.filter-btn');
+    const modelCards = section.querySelectorAll('.model-card');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from buttons in this section only
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            modelCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const isAllFilter = filter.startsWith('all-');
+                
+                if (isAllFilter || category === filter) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
+
+// Initialize filters for both sections
+if (qualcommSection) setupModelFilters(qualcommSection);
+if (kirinSection) setupModelFilters(kirinSection);
 
 // ==================== //
 // Smooth Scroll for Anchor Links
@@ -261,7 +313,7 @@ document.querySelectorAll('.service-card').forEach(card => {
 });
 
 // Model cards stagger animation
-modelCards.forEach((card, index) => {
+document.querySelectorAll('.model-card').forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.05}s`;
 });
 
