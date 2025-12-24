@@ -2103,11 +2103,15 @@ body::after {
     
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 15px;
+        padding: 0 15px;
+        justify-items: center;
     }
     
     .stat-card {
         padding: 25px 15px;
+        width: 100%;
+        text-align: center;
     }
     
     .stat-icon {
@@ -2128,6 +2132,8 @@ body::after {
 @media (max-width: 480px) {
     .stats-grid {
         grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
     }
 }
 
@@ -2140,11 +2146,14 @@ body::after {
     .steps-container {
         flex-direction: column;
         gap: 30px;
+        align-items: center;
+        padding: 0 15px;
     }
     
     .step-card {
-        max-width: 100%;
+        max-width: 350px;
         width: 100%;
+        margin: 0 auto;
     }
     
     .step-connector {
@@ -2176,6 +2185,7 @@ body::after {
         gap: 10px;
         margin-bottom: 30px;
         padding: 0 10px;
+        justify-content: center;
     }
     
     .filter-btn {
@@ -2187,10 +2197,14 @@ body::after {
     .models-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+        padding: 0 15px;
+        max-width: 400px;
+        margin: 0 auto;
     }
     
     .model-card {
         padding: 20px;
+        text-align: center;
     }
     
     .model-card h4 {
@@ -2234,6 +2248,8 @@ body::after {
     
     .faq-container {
         margin: 30px auto 0;
+        max-width: 100%;
+        padding: 0 15px;
         padding: 0 15px;
     }
     
@@ -2256,11 +2272,13 @@ body::after {
 @media (max-width: 768px) {
     .why-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 15px;
+        padding: 0 15px;
     }
     
     .why-card {
         padding: 25px 15px;
+        text-align: center;
     }
     
     .why-icon {
@@ -2279,6 +2297,8 @@ body::after {
 @media (max-width: 480px) {
     .why-grid {
         grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
     }
 }
 
@@ -2287,10 +2307,14 @@ body::after {
     .payment-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 15px;
     }
     
     .payment-card {
         padding: 25px 20px;
+        text-align: center;
     }
 }
 
@@ -2302,10 +2326,14 @@ body::after {
     
     .services-grid {
         gap: 20px;
+        padding: 0 15px;
+        max-width: 400px;
+        margin: 0 auto;
     }
     
     .service-card {
         padding: 25px 20px;
+        text-align: center;
     }
     
     .service-icon {
@@ -2475,6 +2503,21 @@ body::after {
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Center all sections */
+    .section-header,
+    .services-grid,
+    .models-grid,
+    .why-grid,
+    .payment-grid,
+    .faq-container,
+    .brands-slider {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
