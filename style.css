@@ -2046,20 +2046,30 @@ body::after {
 
 @media (max-width: 768px) {
     .back-to-top {
-        bottom: 100px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
+        bottom: 95px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
         z-index: 9999;
+    }
+    
+    .back-to-top.visible {
+        transform: translateX(50%) translateY(0);
+    }
+    
+    .back-to-top:hover {
+        transform: translateX(50%) translateY(-3px);
     }
     
     .whatsapp-float {
         bottom: 30px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
-        font-size: 1.6rem;
+        right: 50%;
+        transform: translateX(50%);
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
         z-index: 9999;
     }
 }
@@ -2102,14 +2112,17 @@ body::after {
     }
     
     .stats-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        padding: 0 15px;
+        padding: 0 20px;
         justify-items: center;
+        max-width: 100%;
+        margin: 0 auto;
     }
     
     .stat-card {
-        padding: 25px 15px;
+        padding: 20px 10px;
         width: 100%;
         text-align: center;
     }
@@ -2388,10 +2401,14 @@ body::after {
         padding-top: 140px;
         padding-bottom: 60px;
         min-height: auto;
+        text-align: center;
     }
     
     .hero-content {
-        padding: 0 15px;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .hero-badge {
@@ -2402,15 +2419,18 @@ body::after {
     .hero h1 {
         font-size: 1.8rem;
         line-height: 1.3;
+        text-align: center;
     }
     
     .hero p {
         font-size: 0.9rem;
+        text-align: center;
     }
     
     .hero-features {
         gap: 15px;
         flex-wrap: wrap;
+        justify-content: center;
     }
     
     .hero-feature {
@@ -2420,15 +2440,24 @@ body::after {
     .hero-buttons {
         flex-direction: column;
         gap: 15px;
+        width: 100%;
+        max-width: 300px;
     }
     
     .hero-buttons .btn {
         width: 100%;
     }
     
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
     .phone-mockup {
         width: 200px;
         height: 400px;
+        margin: 0 auto;
     }
 }
 
@@ -2502,22 +2531,48 @@ body::after {
 /* Container Mobile */
 @media (max-width: 768px) {
     .container {
-        padding: 0 15px;
+        padding: 0 20px;
         width: 100%;
         max-width: 100%;
+        box-sizing: border-box;
     }
     
     /* Center all sections */
+    section {
+        text-align: center;
+    }
+    
     .section-header,
     .services-grid,
     .models-grid,
     .why-grid,
     .payment-grid,
     .faq-container,
-    .brands-slider {
+    .brands-slider,
+    .stats-grid,
+    .steps-container {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+        text-align: center;
+    }
+    
+    /* Fix all grids to center content */
+    .services-grid,
+    .models-grid,
+    .why-grid,
+    .payment-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-card,
+    .model-card,
+    .why-card,
+    .payment-card {
+        width: 100%;
+        max-width: 350px;
     }
 }
 
