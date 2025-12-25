@@ -2378,6 +2378,419 @@ body::after {
     }
 }
 
+/* ===== DOWNLOAD SECTION ===== */
+.download-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 30, 0.95) 100%);
+    position: relative;
+}
+
+.download-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+}
+
+/* Download Tabs */
+.download-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.download-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-tab:hover {
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+}
+
+.download-tab.active {
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
+    border-color: transparent;
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+}
+
+.download-tab i {
+    font-size: 1rem;
+}
+
+/* Download Accordion */
+.download-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.download-category {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.download-category:hover {
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+.download-category.hidden {
+    display: none;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-header:hover {
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.category-title i {
+    font-size: 1.3rem;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.category-title span {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.category-count {
+    font-size: 0.8rem !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: 400 !important;
+}
+
+.category-arrow {
+    color: rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.download-category.open .category-arrow {
+    transform: rotate(180deg);
+    color: var(--neon-cyan);
+}
+
+.category-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.download-category.open .category-content {
+    max-height: 1000px;
+}
+
+/* Download Items */
+.download-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.download-item:hover {
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.item-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.item-icon i {
+    font-size: 1.2rem;
+    color: var(--neon-cyan);
+}
+
+.item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-info h4 {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-info p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-size {
+    font-size: 0.85rem;
+    color: var(--neon-green);
+    background: rgba(0, 255, 0, 0.1);
+    padding: 5px 12px;
+    border-radius: 15px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.item-download {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.item-download:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+}
+
+.item-download i {
+    font-size: 1rem;
+}
+
+/* Sub-Accordion Styles */
+.sub-accordion {
+    margin: 10px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.sub-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.sub-accordion-header:hover {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+.sub-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-title i {
+    color: var(--neon-cyan);
+    font-size: 1.1rem;
+}
+
+.sub-title span {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.sub-count {
+    font-size: 0.75rem !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-weight: 400 !important;
+}
+
+.sub-arrow {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.sub-accordion.open .sub-arrow {
+    transform: rotate(180deg);
+    color: var(--neon-cyan);
+}
+
+.sub-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.sub-accordion.open .sub-accordion-content {
+    max-height: 2000px;
+}
+
+.download-item.sub-item {
+    padding-left: 35px;
+    border-left: 2px solid rgba(0, 255, 255, 0.2);
+    margin-left: 20px;
+}
+
+.download-item.sub-item:hover {
+    border-left-color: var(--neon-cyan);
+}
+
+.download-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 0, 255, 0.2);
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-note i {
+    color: var(--neon-pink);
+    font-size: 1.2rem;
+}
+
+.download-note p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Download Section Mobile */
+@media (max-width: 768px) {
+    .download-section {
+        padding: 60px 0;
+    }
+
+    .download-tabs {
+        gap: 8px;
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    .download-tab {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    .download-tab span {
+        display: none;
+    }
+
+    .download-accordion {
+        padding: 0 10px;
+    }
+
+    .category-header {
+        padding: 15px 20px;
+    }
+
+    .category-title i {
+        font-size: 1.1rem;
+    }
+
+    .category-title > span:first-of-type {
+        font-size: 1rem;
+    }
+
+    .category-count {
+        display: none;
+    }
+
+    .download-item {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+        gap: 12px;
+    }
+
+    .item-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .item-info {
+        flex: 1;
+        min-width: calc(100% - 120px);
+    }
+
+    .item-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .item-size {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+
+    .item-download {
+        width: 36px;
+        height: 36px;
+    }
+
+    .download-note {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
 /* Payment Section Mobile */
 @media (max-width: 768px) {
     .payment-grid {

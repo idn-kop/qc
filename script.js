@@ -530,3 +530,61 @@ if (brandsTrack) {
         brandsTrack.style.animationPlayState = 'running';
     });
 }
+
+// ==================== //
+// Download Section - Tabs & Accordion
+// ==================== //
+
+// Download Tabs
+const downloadTabs = document.querySelectorAll('.download-tab');
+const downloadCategories = document.querySelectorAll('.download-category');
+
+downloadTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Remove active from all tabs
+        downloadTabs.forEach(t => t.classList.remove('active'));
+        // Add active to clicked tab
+        tab.classList.add('active');
+        
+        const category = tab.dataset.category;
+        
+        downloadCategories.forEach(cat => {
+            if (category === 'all') {
+                cat.classList.remove('hidden');
+            } else {
+                if (cat.dataset.cat === category) {
+                    cat.classList.remove('hidden');
+                } else {
+                    cat.classList.add('hidden');
+                }
+            }
+        });
+    });
+});
+
+// Download Accordion
+const categoryHeaders = document.querySelectorAll('.category-header');
+
+categoryHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        const category = header.parentElement;
+        category.classList.toggle('open');
+    });
+});
+
+// Sub-Accordion for nested items (like Kirin 710)
+const subAccordionHeaders = document.querySelectorAll('.sub-accordion-header');
+
+subAccordionHeaders.forEach(header => {
+    header.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent parent accordion from toggling
+        const subAccordion = header.parentElement;
+        subAccordion.classList.toggle('open');
+    });
+});
+
+// Open first category by default
+const firstCategory = document.querySelector('.download-category');
+if (firstCategory) {
+    firstCategory.classList.add('open');
+}
