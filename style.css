@@ -2045,32 +2045,95 @@ body::after {
 }
 
 @media (max-width: 768px) {
-    .back-to-top {
-        bottom: 95px;
-        right: 50%;
-        transform: translateX(50%);
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-        z-index: 9999;
+    /* Hide desktop floating buttons on mobile */
+    .whatsapp-float.desktop-only,
+    .back-to-top.desktop-only {
+        display: none !important;
+    }
+}
+
+/* Desktop Only - show floating buttons */
+@media (min-width: 769px) {
+    .mobile-bottom-nav {
+        display: none !important;
+    }
+}
+
+/* ==================== */
+/* Mobile Bottom Navigation Bar */
+/* ==================== */
+.mobile-bottom-nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: rgba(10, 10, 15, 0.95);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255, 0, 255, 0.3);
+        box-shadow: 0 -5px 30px rgba(255, 0, 255, 0.2);
+        padding: 8px 5px;
+        z-index: 99999;
     }
     
-    .back-to-top.visible {
-        transform: translateX(50%) translateY(0);
+    .bottom-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--text-muted);
+        font-size: 0.65rem;
+        padding: 5px 8px;
+        border-radius: 10px;
+        transition: all 0.3s;
+        min-width: 55px;
     }
     
-    .back-to-top:hover {
-        transform: translateX(50%) translateY(-3px);
+    .bottom-nav-item i {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
     }
     
-    .whatsapp-float {
-        bottom: 30px;
-        right: 50%;
-        transform: translateX(50%);
-        width: 55px;
-        height: 55px;
-        font-size: 1.8rem;
-        z-index: 9999;
+    .bottom-nav-item span {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    
+    .bottom-nav-item:hover,
+    .bottom-nav-item:active {
+        color: var(--neon-cyan);
+        background: rgba(0, 255, 255, 0.1);
+    }
+    
+    /* WhatsApp special styling */
+    .bottom-nav-item.whatsapp-nav {
+        background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(0, 200, 0, 0.1));
+        border: 1px solid var(--neon-green);
+        color: var(--neon-green);
+    }
+    
+    .bottom-nav-item.whatsapp-nav i {
+        font-size: 1.4rem;
+        text-shadow: var(--glow-green);
+    }
+    
+    .bottom-nav-item.whatsapp-nav:hover,
+    .bottom-nav-item.whatsapp-nav:active {
+        background: var(--neon-green);
+        color: var(--dark);
+    }
+    
+    /* Add padding to footer so it doesn't get hidden behind nav */
+    .footer {
+        padding-bottom: 80px;
     }
 }
 
